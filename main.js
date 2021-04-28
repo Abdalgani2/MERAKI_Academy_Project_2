@@ -97,6 +97,36 @@ shopeShose.on("click", () => {
     const picturShose6 = $("<img src='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/zjp8fptkt8xvzszzmskz/air-monarch-iv-mens-training-shoe-lPtRrS.png'> ")
     picturShose6.addClass("viewTheShose");
     divToshopeShose.append(picturShose6); 
+    const shose5 = $("<p>nike<br> price:80$<br></p>");
+    shose5.addClass("describeTheShose");
+    const size5=$("<select></select>");
+    size5.append('<option value=1>size 39-41</option>')
+    size5.append('<option value=2>size 42-44</option>')
+    size5.append('<option value=3>size 45-47</option>')
+    shose5.append(size5);
+    shose5.append("<br>")
+    const addToStore5 = $("<button>add to cart</button>");
+    shose5.append(addToStore5);
+    addToStore5.on("click",()=>{
+        divAddToCart.show()
+
+    })
+    divToshopeShose.append(shose5); 
+    const shose6 = $("<p>nike shose<br> price:70$<br></p>");
+    shose6.addClass("describeTheShose");
+    const size6=$("<select></select>");
+    size6.append('<option value=1>size 38-39</option>')
+    size6.append('<option value=2>size 40-41</option>')
+    size6.append('<option value=3>size 42-43</option>')
+    shose6.append(size6);
+    shose6.append("<br>")
+    const addToStore6 = $("<button>add to cart</button>");
+    shose6.append(addToStore6);
+    addToStore4.on("click",()=>{
+        divAddToCart.show()
+
+    })
+    divToshopeShose.append(shose6);
     
 
     body.append(divToshopeShose);
