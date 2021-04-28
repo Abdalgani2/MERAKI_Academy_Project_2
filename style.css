@@ -13,3 +13,13 @@ body{
     background-color: sandybrown;
     
 }
+.viewTheShose{
+width: 200px;
+height: 200px;
+float: left;
+margin-left: 10px;
+
+}
+p{
+  width: 500px;
+}
