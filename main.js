@@ -127,6 +127,13 @@ shopeShose.on("click", () => {
 
     })
     divToshopeShose.append(shose6);
+    const backButton=$("<button> back </button>")
+    backButton.on("click",()=>{
+divToshopeShose.hide()
+divToMainScren.show()
+
+    })
+    divToshopeShose.append(backButton)
     
 
     body.append(divToshopeShose);
