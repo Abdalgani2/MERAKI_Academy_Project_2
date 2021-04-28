@@ -91,10 +91,13 @@ shopeShose.on("click", () => {
 
     })
     divToshopeShose.append(shose4);
-
-
+    const picturShose5 = $("<img src='https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/11979672/2021/1/4/be55d570-ea5e-41ac-b92a-ba01120831dc1609754255757-Nike-Air-Max-270-React-SEMens-Shoe-7171609754253758-1.jpg'> ")
+    picturShose5.addClass("viewTheShose");
+    divToshopeShose.append(picturShose5);
+    const picturShose6 = $("<img src='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/zjp8fptkt8xvzszzmskz/air-monarch-iv-mens-training-shoe-lPtRrS.png'> ")
+    picturShose6.addClass("viewTheShose");
+    divToshopeShose.append(picturShose6); 
     
-   
 
     body.append(divToshopeShose);
 })
