@@ -1,0 +1,15 @@
+const body = $("body");
+const divToMainScren = $("<div></div>");
+body.append(divToMainScren);
+const shopeShose = $("<button></button>");
+shopeShose.addClass("mainButton");
+divToMainScren.append(shopeShose);
+const ShopeTShirt = $("<button></button>");
+ShopeTShirt.addClass("mainButton");
+divToMainScren.append(ShopeTShirt);
+const ShopeHoodie = $("<button></button>");
+ShopeHoodie.addClass("mainButton");
+divToMainScren.append(ShopeHoodie);
+const ShopeShort = $("<button></button>");
+ShopeShort.addClass("mainButton");
+divToMainScren.append(ShopeShort);
