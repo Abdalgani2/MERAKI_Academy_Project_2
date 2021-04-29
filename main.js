@@ -67,6 +67,57 @@ const shopeShoseItem = [
     }
 
 ]
+const shopeTShirtItem = [
+    {
+        name: "adidas T Shirt",
+        price: " price :10$",
+        option1: "size :small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image: "https://images.sportsdirect.com/images/products/62310940_l.jpg",
+    },
+    {
+        name: " adidas T Shirt",
+        price: "price :10$",
+        option1: "size small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image: "https://cdn.shopify.com/s/files/1/1202/6102/products/adidas-bb-floral-fill-t-shirt-black-multicolour-1.jpg?v=1567095293",
+    },
+    {
+        name: " nike T Shirt",
+        price: "price :20$",
+        option1: "size small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image: "https://thumblr.uniid.it/product/184400/72a340e3cc82.jpg",
+    },
+    {
+        name: " nike T Shirt",
+        price: "price :20$",
+        option1: "size small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image: "https://cdn.mainlinemenswear.co.uk/f_auto,q_auto/mainlinemenswear/shopimages/products/135564/Mainimage.jpg",
+    },
+    {
+        name: " puma T Shirt",
+        price: "price :15$",
+        option1: "size small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image: "https://ean-images.booztcdn.com/puma/232x303/g/pum605558_cpumawhite_v005.jpg",
+    },
+    {
+        name: " puma T Shirt",
+        price: "price :15$",
+        option1: "size small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image: "https://www.costco.com.au/medias/sys_master/images/h0a/he3/17573226676254.jpg",
+    }
+
+]
 shopeShose.on("click", () => {
     divToMainScren.hide();
     const divToshopeShose = $("<div></div>");
@@ -103,10 +154,10 @@ shopeShose.on("click", () => {
 ShopeTShirt.on("click", () => {
     divToMainScren.hide();
     const divToshopeTShirt = $("<div></div>");
-    const picturTShirt1 = $("<img src='https://images.sportsdirect.com/images/products/62310940_l.jpg' >");
+    const picturTShirt1 = $("<img src='' >");
     picturTShirt1.addClass("viewTheShose");
     divToshopeTShirt.append(picturTShirt1);
-    const picturTShirt2 = $("<img src='https://cdn.shopify.com/s/files/1/1202/6102/products/adidas-bb-floral-fill-t-shirt-black-multicolour-1.jpg?v=1567095293' >");
+    const picturTShirt2 = $("<img src='' >");
     picturTShirt2.addClass("viewTheShose");
     divToshopeTShirt.append(picturTShirt2);
 
