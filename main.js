@@ -172,9 +172,10 @@ const ShopeHoodieItem = [
 shopeShose.on("click", () => {
     divToMainScren.hide();
     const divToshopeShose = $("<div></div>");
+    divToshopeShose.addClass="viewTheShose1";
     shopeShoseItem.forEach(element => {
 
-        const card = $(`<div>
+        const card = $(`<div class="s">
         <img class="viewTheShose" src="${element.image}" >
         <p class="describeTheShose">${element.name}<br> ${element.price}<br>
         <select >
@@ -183,13 +184,26 @@ shopeShose.on("click", () => {
          <option value=3>${element.option3}</option>;
         </select></p>
       </div>`)
-        card.addClass = "card";
-        // addToStore1.on("click", () => {
-        //     const val = $(`$("shose1.text()")`);
-        //     console.log(val);
-        //     divAddToCart.append(val);
-        // });
-        divToshopeShose.append(card);
+      
+      divToshopeShose.append(card);
+      const addToStore=$("<button>add to cart</button>")
+      addToStore.addClass="addToCartButton"
+      divToshopeShose.append(addToStore)
+        addToStore.on("click", () => {
+            const card = $(`<div>
+            <img class="viewTheShose" src="${element.image}" >
+            <p class="describeTheShose">${element.name}<br> ${element.price}<br>
+            <select >
+             <option value=1>${element.option1}</option>;
+             <option value=2>${element.option2}</option>;
+             <option value=3>${element.option3}</option>;
+            </select></p>
+          </div>`)
+             divAddToCart.append(card);
+
+         });
+        
+
     });
     const backButton = $("<button> back </button>");
     backButton.on("click", () => {
@@ -216,8 +230,6 @@ ShopeTShirt.on("click", () => {
          <option value=3>${element.option3}</option>;
         </select></p>
       </div>`)
-        card.addClass = "card";
-
         divToshopeTShirt.append(card);
     });
     const backButton = $("<button> back </button>");
@@ -230,4 +242,31 @@ ShopeTShirt.on("click", () => {
 
 
     body.append(divToshopeTShirt);
+});
+ShopeHoodie.on("click", () => {
+    divToMainScren.hide();
+    const divToshopeHoodie = $("<div></div>");
+    ShopeHoodieItem.forEach(element => {
+
+        const card = $(`<div>
+        <img class="viewTheShose" src="${element.image}" >
+        <p class="describeTheShose">${element.name}<br> ${element.price}<br>
+        <select >
+         <option value=1>${element.option1}</option>;
+         <option value=2>${element.option2}</option>;
+         <option value=3>${element.option3}</option>;
+        </select></p>
+      </div>`)
+        divToshopeHoodie.append(card);
+    });
+    const backButton = $("<button> back </button>");
+    backButton.on("click", () => {
+        divToshopeHoodie.hide();
+        divToMainScren.show();
+
+    });
+    divToshopeHoodie.append(backButton)
+
+
+    body.append(divToshopeHoodie);
 });

@@ -14,19 +14,26 @@ body{
     
 }
 .viewTheShose{
-width: 47%;
-height: 300px;
+width: 30%;
+height: 200px;
 margin-left: 10px;
 
 }
 .describeTheShose{
-  width: 47%;
+  width: 30%;
   text-align: center;
 font-size: 20px;
 font-family: Arial ;
 }
-.card{
-  width: 47%;
-  float: left;
+.addToCartButton{
+  width: 60px;
+  height: 60px;
+}
+.viewTheShose1{
+  display: flexbox;
 }
 
+.S{
+  width: 30%;
+  display: flexbox;
+}
