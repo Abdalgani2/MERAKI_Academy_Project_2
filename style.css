@@ -16,11 +16,12 @@ body{
 .viewTheItem{
   width: 300px;
   height: 300px;
+  border-bottom: 2px solid red;
   
 
 }
 .describeTheItem{
-  color: white;
+
   width: 300px;
   text-align: center;
 font-size: 20px;
