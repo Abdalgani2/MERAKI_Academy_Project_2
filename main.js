@@ -29,6 +29,7 @@ $(".addToCartButton").on("click", () => {
     divToshopeShose.hide()
     divToshopeTShirt.hide()
     divToshopeHoodie.hide()
+    divToshopeShort.hide()
     body.append(divAddToCart);
     const backButton = $("<button class='backButton'> back </button>");
     backButton.addClass = " backButton"
@@ -278,6 +279,19 @@ function f3(index){
           <option value=1>${ShopeHoodieItem[index].option1}</option>;
           <option value=2>${ShopeHoodieItem[index].option2}</option>;
           <option value=3>${ShopeHoodieItem[index].option3}</option>;
+         </select><br>
+        </p>
+       </div>`);
+       divAddToCart.append(card1);
+} 
+function f4(index){
+    const card1 = $(`<div class="s" >
+        <img class="viewTheItem" src="${shopeShortItem[index].image}" >
+         <p class="describeTheItem">${shopeShortItem[index].name}<br> ${index.price}<br>
+         <select >
+          <option value=1>${shopeShortItem[index].option1}</option>;
+          <option value=2>${shopeShortItem[index].option2}</option>;
+          <option value=3>${shopeShortItem[index].option3}</option>;
          </select><br>
         </p>
        </div>`);
