@@ -192,6 +192,24 @@ const ShopeHoodieItem = [
     }
 
 ]
+const shopeShortItem=[
+    {
+        name :"adidas short",
+        price :"10$",
+        option1: "size :small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image :"https://i.frog.ink/PgqGkgyl/adidas-men-4krft-bos-shorts-training-running-pants-du1592-01_600.jpg"
+    },
+    {
+        name :"adidas short",
+        price :"15$",
+        option1: "size :small",
+        option2: "size larg",
+        option3: "size x-larg",
+        image :"https://i.frog.ink/npKoBeSJ/adidas-men-tastigo-19-ss-climalite-training-bottle-pant-jersey-dp3682-01_600.jpg?v=1544418628.59"
+    },
+]
 function f1(ele){
     console.log(ele)
     console.log(shopeShoseItem[ele].name)
