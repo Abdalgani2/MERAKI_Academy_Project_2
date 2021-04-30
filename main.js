@@ -243,16 +243,27 @@ const shopeShortItem=[
         image :"data:image/jpeg;base64,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"
     },
 ]
-function f1(ele){
-    console.log(ele)
-    console.log(shopeShoseItem[ele].name)
+function f1(index){
      const card1 = $(`<div class="s" >
-         <img class="viewTheItem" src="${shopeShoseItem[ele].image}" >
-          <p class="describeTheItem">${shopeShoseItem[ele].name}<br> ${ele.price}<br>
+         <img class="viewTheItem" src="${shopeShoseItem[index].image}" >
+          <p class="describeTheItem">${shopeShoseItem[index].name}<br> ${index.price}<br>
           <select >
-           <option value=1>${shopeShoseItem[ele].option1}</option>;
-           <option value=2>${shopeShoseItem[ele].option2}</option>;
-           <option value=3>${shopeShoseItem[ele].option3}</option>;
+           <option value=1>${shopeShoseItem[index].option1}</option>;
+           <option value=2>${shopeShoseItem[index].option2}</option>;
+           <option value=3>${shopeShoseItem[index].option3}</option>;
+          </select><br>
+         </p>
+        </div>`);
+        divAddToCart.append(card1);
+}
+function f2(index){
+     const card1 = $(`<div class="s" >
+         <img class="viewTheItem" src="${shopeTShirtItem[index].image}" >
+          <p class="describeTheItem">${shopeTShirtItem[index].name}<br> ${index.price}<br>
+          <select >
+           <option value=1>${shopeTShirtItem[index].option1}</option>;
+           <option value=2>${shopeTShirtItem[index].option2}</option>;
+           <option value=3>${shopeTShirtItem[index].option3}</option>;
           </select><br>
          </p>
         </div>`);
@@ -285,7 +296,7 @@ shopeShose.on("click", () => {
 })
 ShopeTShirt.on("click", () => {
     divToMainScren.hide();
-    shopeTShirtItem.forEach(element => {
+    shopeTShirtItem.forEach((element,index) => {
         const card = $(`<div class="s">
         <img class="viewTheItem" src="${element.image}" >
         <p class="describeTheItem">${element.name}<br> ${element.price}<br>
@@ -294,26 +305,10 @@ ShopeTShirt.on("click", () => {
          <option value=2>${element.option2}</option>;
          <option value=3>${element.option3}</option>;
         </select><br>
-        <button id="addButton" >add to cart</button>
+        <button id="addButton${index}" onclick=f2(${index}) >add to cart</button>
        </p>
       </div>`)
         divToshopeTShirt.append(card);
-        const addToStore = $("<button >add to cart</button>")
-        // divToshopeTShirt.append(addToStore)
-        addToStore.on("click", () => {
-            console.log("test")
-            const card1 = $(`<div >
-        <img class="viewTheItem" src="${element.image}" >
-        <p class="describeTheItem">${element.name}<br> ${element.price}<br>
-        <select >
-         <option value=1>${element.option1}</option>;
-         <option value=2>${element.option2}</option>;
-         <option value=3>${element.option3}</option>;
-        </select><br>
-       </p>
-      </div>`);
-            divAddToCart.append(card1);
-        });
     });
     const backButton = $("<button class='backButton'> back </button>");
     backButton.addClass = " backButton"
@@ -340,27 +335,11 @@ ShopeHoodie.on("click", () => {
        </p>
       </div>`)
         divToshopeHoodie.append(card);
-        // const addToStore = 
-        // divToshopeShose.append(addToStore)
-        $("#addButton").on("click", (e) => {
-            console.log("test")
-            const card1 = $(`<div >
-        <img class="viewTheItem" src="${element.image}" >
-        <p class="describeTheItem">${element.name}<br> ${element.price}<br>
-        <select >
-         <option value=1>${element.option1}</option>;
-         <option value=2>${element.option2}</option>;
-         <option value=3>${element.option3}</option>;
-        </select><br>
-       </p>
-      </div>`);
-            divAddToCart.append(card1);
-        });
     });
     const backButton = $("<button class='backButton'> back </button>");
     backButton.addClass = " backButton"
     backButton.on("click", () => {
-        divToshopeShose.hide();
+        divToshopeHoodie.hide();
         divToMainScren.show();
     });
     divToshopeHoodie.append(backButton);
