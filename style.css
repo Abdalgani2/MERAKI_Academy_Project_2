@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(196, 8, 221);
+    background-color: black;
 }
 .mainButton{
 
@@ -20,6 +20,7 @@ body{
 
 }
 .describeTheItem{
+  color: white;
   width: 300px;
   text-align: center;
 font-size: 20px;
@@ -39,12 +40,16 @@ font-family: Arial ;
   
 }
 .backButton{
-  width: 60px;
+  margin-top: 20px;
+  width: 90px;
   height: 40px;
 }
 .s{
   width: 303px;
-  padding-left: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  background-color: white;
+  border: white ;
   
 }
 

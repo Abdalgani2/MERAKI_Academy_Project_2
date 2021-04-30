@@ -212,7 +212,7 @@ shopeShose.on("click", () => {
 
 
     });
-    const backButton = $("<button> back </button>");
+    const backButton = $("<button class='backButton'> back </button>");
     backButton.addClass=" backButton"
     backButton.on("click", () => {
         divToshopeShose.hide();
