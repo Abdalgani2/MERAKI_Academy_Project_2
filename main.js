@@ -21,8 +21,9 @@ ShopeShort.addClass("mainButton");
 divToMainScren.append(ShopeShort);
 const divToshopeShose = $("<div class='viewTheDiv'></div>");
 const divToshopeTShirt = $("<div class='viewTheDiv'></div>");
-const divAddToCart = $("<div class='viewTheDiv'></div>");
 const divToshopeHoodie = $("<div class='viewTheDiv'></div>");
+const divToshopeShort = $("<div class='viewTheDiv'></div>");
+const divAddToCart = $("<div class='viewTheDiv'></div>");
 $(".addToCartButton").on("click", () => {
     divToMainScren.hide()
     divToshopeShose.hide()
@@ -210,14 +211,6 @@ const shopeShortItem=[
         image :"https://i.frog.ink/npKoBeSJ/adidas-men-tastigo-19-ss-climalite-training-bottle-pant-jersey-dp3682-01_600.jpg?v=1544418628.59"
     },
     {
-        name :"adidas short",
-        price :"12$",
-        option1: "size :small",
-        option2: "size larg",
-        option3: "size x-larg",
-        image :"https://i.frog.ink/npKoBeSJ/adidas-men-tastigo-19-ss-climalite-training-bottle-pant-jersey-dp3682-01_600.jpg?v=1544418628.59"
-    },
-    {
         name :"nike short",
         price :"11$",
         option1: "size :small",
@@ -373,3 +366,28 @@ ShopeHoodie.on("click", () => {
     divToshopeHoodie.append(backButton);
     body.append(divToshopeHoodie);
 });
+ShopeShort.on("click", () => {
+    divToMainScren.hide();
+    shopeShortItem.forEach((element,index) => {
+        const card = $(`<div class="s">
+        <img class="viewTheItem" src="${element.image}" >
+        <p class="describeTheItem">${element.name}<br> ${element.price}<br>
+        <select >
+         <option value=1>${element.option1}</option>;
+         <option value=2>${element.option2}</option>;
+         <option value=3>${element.option3}</option>;
+        </select><br>
+        <button id="addButton${index}" onclick=f4(${index}) >add to cart</button>
+       </p>
+      </div>`)
+        divToshopeShort.append(card)
+    });
+    const backButton = $("<button class='backButton'> back </button>");
+    backButton.addClass = " backButton"
+    backButton.on("click", () => {
+        divToshopeShort.hide();
+        divToMainScren.show();
+    });
+    divToshopeShort.append(backButton)
+    body.append(divToshopeShort);
+})
