@@ -2,9 +2,15 @@ const body = $("body");
 const divToMainScren = $("<div></div>");
 body.append(divToMainScren);
 const shopeShose = $("<button></button>");
+shopeShose.css({
+    "background-image": "url(https://image.shutterstock.com/image-vector/shoes-set-sneakers-vector-illustration-260nw-439348147.jpg)",
+})
 shopeShose.addClass("mainButton");
 divToMainScren.append(shopeShose);
 const ShopeTShirt = $("<button></button>");
+ShopeTShirt.css({
+    "background-image": "url('')",
+})
 ShopeTShirt.addClass("mainButton");
 divToMainScren.append(ShopeTShirt);
 const ShopeHoodie = $("<button></button>");
@@ -250,7 +256,7 @@ ShopeTShirt.on("click", () => {
             divAddToCart.append(card1);
         });
     });
-    const backButton = $("<button> back </button>");
+    const backButton = $("<button class='backButton'> back </button>");
     backButton.addClass = " backButton"
     backButton.on("click", () => {
         divToshopeTShirt.hide();

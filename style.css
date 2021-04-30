@@ -3,7 +3,6 @@ body{
     background-color: black;
 }
 .mainButton{
-
     width: 46.5%;
     height: 200px;
   margin-top: 20px;
@@ -11,7 +10,8 @@ body{
   margin-right: 1.5%;
   display: flexbox;
     background-color: sandybrown;
-    
+    text-align: center;
+   
 }
 .viewTheItem{
   width: 300px;
@@ -44,6 +44,8 @@ font-family: Arial ;
   margin-top: 20px;
   width: 90px;
   height: 40px;
+  text-align: center;
+font-size: 20px;
 }
 .s{
   width: 303px;
