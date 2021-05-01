@@ -8,6 +8,9 @@ shopeShose.css({
 })
 divToMainScren.append(shopeShose);
 const ShopeTShirt = $("<button>shope T shirt</button>");
+ShopeTShirt.css({
+    "background-image": "url('tshirt3.png')",
+})
 ShopeTShirt.addClass("mainButton");
 divToMainScren.append(ShopeTShirt);
 const ShopeHoodie = $("<button></button>");
