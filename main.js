@@ -23,7 +23,7 @@ const ShopeShort = $("<button>shope short</button>");
 ShopeShort.addClass("mainButton");
 ShopeShort.css({
     "background-image": "url('short1.png')",
-})
+});
 divToMainScren.append(ShopeShort);
 const divToshopeShose = $("<div class='viewTheDiv'></div>");
 const divToshopeTShirt = $("<div class='viewTheDiv'></div>");
