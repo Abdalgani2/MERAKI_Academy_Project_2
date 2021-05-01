@@ -1,15 +1,12 @@
 const body = $("body");
 const divToMainScren = $("<div></div>");
 body.append(divToMainScren);
-const shopeShose = $("<button></button>");
-shopeShose.css({
-    "background-image": "url(https://image.shutterstock.com/image-vector/shoes-set-sneakers-vector-illustration-260nw-439348147.jpg)",
-})
+const shopeShose = $("<button>shope shose</button>");
 shopeShose.addClass("mainButton");
 divToMainScren.append(shopeShose);
-const ShopeTShirt = $("<button></button>");
+const ShopeTShirt = $("<button>shope T shirt</button>");
 ShopeTShirt.css({
-    "background-image": "url('tshirt1.jpg')",
+    "background-image": "url('')",
 })
 ShopeTShirt.addClass("mainButton");
 divToMainScren.append(ShopeTShirt);
@@ -253,11 +250,12 @@ function f1(index){
            <option value=1>${shopeShoseItem[index].option1}</option>;
            <option value=2>${shopeShoseItem[index].option2}</option>;
            <option value=3>${shopeShoseItem[index].option3}</option>;
-          </select><br>
+          </select><br><button class="removebutton">remove<button>
          </p>
         </div>`);
         divAddToCart.append(card1);
-}
+
+};
 function f2(index){
      const card1 = $(`<div class="s" >
          <img class="viewTheItem" src="${shopeTShirtItem[index].image}" >
