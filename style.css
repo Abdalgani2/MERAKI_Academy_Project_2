@@ -12,7 +12,9 @@ body{
     background-color: white;
     text-align: center;
     font-size: x-large;
-   
+}
+.mainButton:hover{
+  background-color: rgb(12, 214, 12) ;
 }
 .viewTheItem{
   width: 295px;
