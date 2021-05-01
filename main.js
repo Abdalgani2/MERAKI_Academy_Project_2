@@ -43,7 +43,7 @@ $(".viewCartButton").on("click", () => {
         divAddToCart.hide();
         divToMainScren.show();
     });
-    body.append(backButton);
+    divAddToCart.append(backButton);
 })
 const shopeShoseItem = [
     {
@@ -258,9 +258,10 @@ function f1(index) {
            <option value=1>${shopeShoseItem[index].option1}</option>;
            <option value=2>${shopeShoseItem[index].option2}</option>;
            <option value=3>${shopeShoseItem[index].option3}</option>;
-          </select><br><button class="removebutton">remove<button>
+          </select><br>
          </p>
         </div>`);
+        
     divAddToCart.append(card1);
 
 };
