@@ -30,7 +30,7 @@ const divToshopeTShirt = $("<div class='viewTheDiv'></div>");
 const divToshopeHoodie = $("<div class='viewTheDiv'></div>");
 const divToshopeShort = $("<div class='viewTheDiv'></div>");
 const divAddToCart = $("<div class='viewTheDiv'></div>");
-$(".addToCartButton").on("click", () => {
+$(".viewCartButton").on("click", () => {
     divToMainScren.hide()
     divToshopeShose.hide()
     divToshopeTShirt.hide()
@@ -42,9 +42,8 @@ $(".addToCartButton").on("click", () => {
     backButton.on("click", () => {
         divAddToCart.hide();
         divToMainScren.show();
-
     });
-    divAddToCart.append(backButton)
+    body.append(backButton);
 })
 const shopeShoseItem = [
     {
@@ -252,7 +251,7 @@ const shopeShortItem = [
     },
 ]
 function f1(index) {
-    const card1 = $(`<div class="s" >
+    const card1 = $(`<div class="divViewIten" >
          <img class="viewTheItem" src="${shopeShoseItem[index].image}" >
           <p class="describeTheItem">${shopeShoseItem[index].name}<br> ${index.price}<br>
           <select >
@@ -266,7 +265,7 @@ function f1(index) {
 
 };
 function f2(index) {
-    const card1 = $(`<div class="s" >
+    const card1 = $(`<div class="divViewIten" >
          <img class="viewTheItem" src="${shopeTShirtItem[index].image}" >
           <p class="describeTheItem">${shopeTShirtItem[index].name}<br> ${index.price}<br>
           <select >
@@ -279,7 +278,7 @@ function f2(index) {
     divAddToCart.append(card1);
 }
 function f3(index) {
-    const card1 = $(`<div class="s" >
+    const card1 = $(`<div class="divViewIten" >
         <img class="viewTheItem" src="${ShopeHoodieItem[index].image}" >
          <p class="describeTheItem">${ShopeHoodieItem[index].name}<br> ${index.price}<br>
          <select >
@@ -292,7 +291,7 @@ function f3(index) {
     divAddToCart.append(card1);
 }
 function f4(index) {
-    const card1 = $(`<div class="s" >
+    const card1 = $(`<div class="divViewIten" >
         <img class="viewTheItem" src="${shopeShortItem[index].image}" >
          <p class="describeTheItem">${shopeShortItem[index].name}<br> ${index.price}<br>
          <select >
@@ -307,7 +306,7 @@ function f4(index) {
 shopeShose.on("click", () => {
     divToMainScren.hide();
     shopeShoseItem.forEach((element, index) => {
-        const card = $(`<div class="s">
+        const card = $(`<div class="divViewIten">
         <img class="viewTheItem" src="${element.image}" >
         <p class="describeTheItem">${element.name}<br> ${element.price}<br>
         <select >
@@ -332,7 +331,7 @@ shopeShose.on("click", () => {
 ShopeTShirt.on("click", () => {
     divToMainScren.hide();
     shopeTShirtItem.forEach((element, index) => {
-        const card = $(`<div class="s">
+        const card = $(`<div class="divViewIten">
         <img class="viewTheItem" src="${element.image}" >
         <p class="describeTheItem">${element.name}<br> ${element.price}<br>
         <select >
@@ -357,7 +356,7 @@ ShopeTShirt.on("click", () => {
 ShopeHoodie.on("click", () => {
     divToMainScren.hide();
     ShopeHoodieItem.forEach((element, index) => {
-        const card = $(`<div class="s">
+        const card = $(`<div class="divViewIten">
         <img class="viewTheItem" src="${element.image}" >
         <p class="describeTheItem">${element.name}<br> ${element.price}<br>
         <select >
@@ -382,7 +381,7 @@ ShopeHoodie.on("click", () => {
 ShopeShort.on("click", () => {
     divToMainScren.hide();
     shopeShortItem.forEach((element, index) => {
-        const card = $(`<div class="s">
+        const card = $(`<div class="divViewIten">
         <img class="viewTheItem" src="${element.image}" >
         <p class="describeTheItem">${element.name}<br> ${element.price}<br>
         <select >
