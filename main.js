@@ -4,20 +4,26 @@ body.append(divToMainScren);
 const shopeShose = $("<button>shope shose</button>");
 shopeShose.addClass("mainButton");
 shopeShose.css({
-    "background-image": "url('shose4.jpg')",
-})
+    "background-image": "url('shose.png')",
+});
 divToMainScren.append(shopeShose);
 const ShopeTShirt = $("<button>shope T shirt</button>");
 ShopeTShirt.css({
     "background-image": "url('tshirt3.png')",
-})
+});
 ShopeTShirt.addClass("mainButton");
 divToMainScren.append(ShopeTShirt);
-const ShopeHoodie = $("<button></button>");
+const ShopeHoodie = $("<button>shope hoodie</button>");
+ShopeHoodie.css({
+    "background-image": "url('hodie.png')",
+});
 ShopeHoodie.addClass("mainButton");
 divToMainScren.append(ShopeHoodie);
-const ShopeShort = $("<button></button>");
+const ShopeShort = $("<button>shope short</button>");
 ShopeShort.addClass("mainButton");
+ShopeShort.css({
+    "background-image": "url('short1.png')",
+})
 divToMainScren.append(ShopeShort);
 const divToshopeShose = $("<div class='viewTheDiv'></div>");
 const divToshopeTShirt = $("<div class='viewTheDiv'></div>");
