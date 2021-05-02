@@ -1,11 +1,29 @@
 const body = $("body");
 const divToMainScren = $("<div></div>");
-const shopeNow = $("<button>shope Now</button>");
-body.append(shopeNow);
-shopeNow.on("click", () => {
-    shopeNow.remove()
-    body.append(divToMainScren);
+
+// --------------------------------------------------------------------------
+//main button to shope item 
+const divlogin=$(`<div class="divViewIten">
+<input type="text" id="name" class= "input" name="user name" placeholder="User name..">
+<input type="password" id="password" class="input"  name="Password" placeholder="Password..">
+<button id="login">login</button>
+</div>`)
+ body.append(divlogin)
+const loginInfo=[
+    {userName:"abd",
+    password:"1234",
+    }
+]
+$("#login").on("click",()=>{
+    loginInfo.forEach(element => {
+        if(element.userName===$("#name").val() &&element.password===$("#password").val()){
+            console.log("abd")
+            divlogin.hide();
+            body.append(divToMainScren);
+        }
+    });
 })
+
 // --------------------------------------------------------------------------
 //main button to shope item 
 const shopeShose = $("<button>shope shose</button>");
@@ -367,7 +385,6 @@ shopeShoseItem.forEach((element, index) => {
          <option value=3>${element.option3}</option>;
         </select><br>
         <button id="addButton${index}" onclick=f1(${index}) >add to cart</button><br>
-        <i class="fa fa-star" aria-hidden="true"></i>
        </p>
       </div>`);
     divToshopeShose.append(cardshose);
