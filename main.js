@@ -1,9 +1,15 @@
 const body = $("body");
 const divToMainScren = $("<div></div>");
-body.append(divToMainScren);
+const shopeNow=$("<button>shope Now</button>");
+body.append(shopeNow);
+shopeNow.on("click",()=>{
+    shopeNow.remove()
+    body.append(divToMainScren);
+}) 
 const shopeShose = $("<button>shope shose</button>");
 shopeShose.addClass("mainButton");
 shopeShose.css({
+    
     "background-image": "url('shose.png')",
 });
 divToMainScren.append(shopeShose);
@@ -254,16 +260,17 @@ function f1(index) {
     const card1 = $(`<div class="divViewIten" >
          <img class="viewTheItem" src="${shopeShoseItem[index].image}" >
           <p class="describeTheItem">${shopeShoseItem[index].name}<br> ${index.price}<br>
-          <select >
-           <option value=1>${shopeShoseItem[index].option1}</option>;
-           <option value=2>${shopeShoseItem[index].option2}</option>;
-           <option value=3>${shopeShoseItem[index].option3}</option>;
-          </select><br>
+          <br><button>buy</button>
+          <br>
          </p>
-        </div>`);
-        
-    divAddToCart.append(card1);
-
+        </div>`)
+        const remove = $("<button >remove</button>")
+        card1.append(remove)
+        divAddToCart.append(card1);
+        remove.on("click",()=>{
+            console.log()
+          card1.remove()
+        })
 };
 function f2(index) {
     const card1 = $(`<div class="divViewIten" >
@@ -275,7 +282,14 @@ function f2(index) {
            <option value=3>${shopeTShirtItem[index].option3}</option>;
           </select><br>
          </p>
-        </div>`);
+        </div>`); 
+        const remove = $("<button >remove</button>")
+        card1.append(remove)
+        divAddToCart.append(card1);
+        remove.on("click",()=>{
+            console.log()
+          card1.remove()
+        })
     divAddToCart.append(card1);
 }
 function f3(index) {
@@ -315,10 +329,12 @@ shopeShose.on("click", () => {
          <option value=2>${element.option2}</option>;
          <option value=3>${element.option3}</option>;
         </select><br>
-        <button id="addButton${index}" onclick=f1(${index}) >add to cart</button>
+        <button id="addButton${index}" onclick=f1(${index}) >add to cart</button><br>
+        <i class="fa fa-star" aria-hidden="true"></i>
        </p>
       </div>`);
         divToshopeShose.append(card);
+        divToshopeShose.show()
     });
     const backButton = $("<button class='backButton'> back </button>");
     backButton.addClass = " backButton"
@@ -378,6 +394,7 @@ ShopeHoodie.on("click", () => {
     });
     divToshopeHoodie.append(backButton);
     body.append(divToshopeHoodie);
+    divToshopeHoodie.show()
 });
 ShopeShort.on("click", () => {
     divToMainScren.hide();
@@ -403,4 +420,5 @@ ShopeShort.on("click", () => {
     });
     divToshopeShort.append(backButton)
     body.append(divToshopeShort);
+    divToshopeShort.show()
 });
