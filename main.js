@@ -7,6 +7,7 @@ const divlogin=$(`<div class="divViewIten">
 <input type="text" id="name" class= "input" name="user name" placeholder="User name..">
 <input type="password" id="password" class="input"  name="Password" placeholder="Password..">
 <button id="login">login</button>
+<button id="creatAccount">creat account</button>
 </div>`)
  body.append(divlogin)
 const loginInfo=[
@@ -21,9 +22,32 @@ $("#login").on("click",()=>{
             divlogin.hide();
             body.append(divToMainScren);
         }
+        divlogin.append("<p>user name or password</p>");
     });
 })
+$("#creatAccount").on("click",()=>{
 
+    const divcreat=$(`<div class="divViewIten">
+<input type="text" id="name1" class= "input" name="user name" placeholder="User name..">
+<input type="password" id="password1" class="input"  name="Password" placeholder="Password..">
+<input type="text"  class="input"  name="Password" placeholder="email-address">
+<button id="login1">login</button>
+</div>`)
+divlogin.hide()
+ body.append(divcreat)
+ $("#login1").on("click",()=>{
+     console.log("äbood")
+    const ob={name:$("#name1").val(),password:$("#Password1").val}
+    loginInfo.push(ob)
+    divcreat.hide()
+    body.append(divToMainScren);
+
+    
+
+ })
+
+
+})
 // --------------------------------------------------------------------------
 //main button to shope item 
 const shopeShose = $("<button>shope shose</button>");
