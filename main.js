@@ -1,17 +1,17 @@
 const body = $("body");
 const divToMainScren = $("<div></div>");
-const shopeNow=$("<button>shope Now</button>");
+const shopeNow = $("<button>shope Now</button>");
 body.append(shopeNow);
-shopeNow.on("click",()=>{
+shopeNow.on("click", () => {
     shopeNow.remove()
     body.append(divToMainScren);
-}) 
+})
 // --------------------------------------------------------------------------
 //main button to shope item 
 const shopeShose = $("<button>shope shose</button>");
 shopeShose.addClass("mainButton");
 shopeShose.css({
-    
+
     "background-image": "url('shose.png')",
 });
 divToMainScren.append(shopeShose);
@@ -43,12 +43,12 @@ const divToshopeShort = $("<div class='viewTheDiv'></div>");
 //my cart 
 const divAddToCart = $("<div class='viewTheDiv'></div>");
 const backButtoncart = $("<button class='backButton'> back </button>");
-    backButtoncart.addClass = " backButton"
-    backButtoncart.on("click", () => {
-        divAddToCart.hide();
-        divToMainScren.show();
-    });
-    divAddToCart.append(backButtoncart);
+backButtoncart.addClass = " backButton"
+backButtoncart.on("click", () => {
+    divAddToCart.hide();
+    divToMainScren.show();
+});
+divAddToCart.append(backButtoncart);
 $(".viewCartButton").on("click", () => {
     divToMainScren.hide()
     divToshopeShose.hide()
@@ -281,13 +281,13 @@ function f1(index) {
           <br>
          </p>
         </div>`)
-        const remove = $("<button >remove</button>")
-        card1.append(remove)
-        divAddToCart.append(card1);
-        remove.on("click",()=>{
-            console.log()
-          card1.remove()
-        })
+    const remove = $("<button >remove</button>")
+    card1.append(remove)
+    divAddToCart.append(card1);
+    remove.on("click", () => {
+        console.log()
+        card1.remove()
+    })
 };
 //-------------------------------------------------------------------------
 //function for add item shope T-Shirt to cart
@@ -301,14 +301,14 @@ function f2(index) {
            <option value=3>${shopeTShirtItem[index].option3}</option>;
           </select><br>
          </p>
-        </div>`); 
-        const remove = $("<button >remove</button>")
-        card1.append(remove)
-        divAddToCart.append(card1);
-        remove.on("click",()=>{
-            console.log()
-          card1.remove()
-        })
+        </div>`);
+    const remove = $("<button >remove</button>")
+    card1.append(remove)
+    divAddToCart.append(card1);
+    remove.on("click", () => {
+        console.log()
+        card1.remove()
+    })
     divAddToCart.append(card1);
 }
 //-------------------------------------------------------------------------
@@ -326,12 +326,12 @@ function f3(index) {
        </div>`);
     divAddToCart.append(card1);
     const remove = $("<button >remove</button>")
-        card1.append(remove)
-        divAddToCart.append(card1);
-        remove.on("click",()=>{
-            console.log()
-          card1.remove()
-        })
+    card1.append(remove)
+    divAddToCart.append(card1);
+    remove.on("click", () => {
+        console.log()
+        card1.remove()
+    })
 }
 //-------------------------------------------------------------------------
 //function for add item shope short to cart
@@ -348,18 +348,17 @@ function f4(index) {
        </div>`);
     divAddToCart.append(card1);
     const remove = $("<button >remove</button>")
-        card1.append(remove)
-        divAddToCart.append(card1);
-        remove.on("click",()=>{
-            console.log()
-          card1.remove()
-        })
+    card1.append(remove)
+    divAddToCart.append(card1);
+    remove.on("click", () => {
+        console.log()
+        card1.remove()
+    })
 }
 //-------------------------------------------------------------------------
-//add item in array shope shose to div
-
-    shopeShoseItem.forEach((element, index) => {
-        const cardshose = $(`<div class="divViewIten">
+//add item on array shose to div
+shopeShoseItem.forEach((element, index) => {
+    const cardshose = $(`<div class="divViewIten">
         <img class="viewTheItem" src="${element.image}" >
         <p class="describeTheItem">${element.name}<br> ${element.price}<br>
         <select >
@@ -371,96 +370,112 @@ function f4(index) {
         <i class="fa fa-star" aria-hidden="true"></i>
        </p>
       </div>`);
-        divToshopeShose.append(cardshose);
-        divToshopeShose.show()
-    });
-    const backButtonshose = $("<button class='backButton'> back </button>");
-    backButtonshose.addClass = " backButton"
-    backButtonshose.on("click", () => {
-        divToshopeShose.hide();
-        divToMainScren.show();
-    });
-    divToshopeShose.append(backButtonshose);
+    divToshopeShose.append(cardshose);
+    divToshopeShose.show()
+});
+const backButtonshose = $("<button class='backButton'> back </button>");
+backButtonshose.addClass = " backButton"
+
+backButtonshose.on("click", () => {
+    divToshopeShose.hide();
+    divToMainScren.show();
+});
+divToshopeShose.append(backButtonshose);
+//-------------------------------------------------------------------------
+//botton to view div shope shose in body
 shopeShose.on("click", () => {
     divToMainScren.hide();
-    
     body.append(divToshopeShose);
     divToshopeShose.show()
-})
+});
+//-------------------------------------------------------------------------
+//add item on array T-Shirt to div
+shopeTShirtItem.forEach((element, index) => {
+    const cardTShirt = $(`<div class="divViewIten">
+    <img class="viewTheItem" src="${element.image}" >
+    <p class="describeTheItem">${element.name}<br> ${element.price}<br>
+    <select >
+     <option value=1>${element.option1}</option>;
+     <option value=2>${element.option2}</option>;
+     <option value=3>${element.option3}</option>;
+    </select><br>
+    <button id="addButton${index}" onclick=f2(${index}) >add to cart</button>
+   </p>
+  </div>`);
+    divToshopeTShirt.append(cardTShirt);
+});
+const backButtonTShirt = $("<button class='backButton'> back </button>");
+backButtonTShirt.addClass = " backButton"
+backButtonTShirt.on("click", () => {
+    divToshopeTShirt.hide();
+    divToMainScren.show();
+});
+divToshopeTShirt.append(backButtonTShirt);
+//-------------------------------------------------------------------------
+//botton to view div shope T-Shirt in body
 ShopeTShirt.on("click", () => {
     divToMainScren.hide();
-    shopeTShirtItem.forEach((element, index) => {
-        const card = $(`<div class="divViewIten">
-        <img class="viewTheItem" src="${element.image}" >
-        <p class="describeTheItem">${element.name}<br> ${element.price}<br>
-        <select >
-         <option value=1>${element.option1}</option>;
-         <option value=2>${element.option2}</option>;
-         <option value=3>${element.option3}</option>;
-        </select><br>
-        <button id="addButton${index}" onclick=f2(${index}) >add to cart</button>
-       </p>
-      </div>`);
-        divToshopeTShirt.append(card);
-    });
-    const backButton = $("<button class='backButton'> back </button>");
-    backButton.addClass = " backButton"
-    backButton.on("click", () => {
-        divToshopeTShirt.hide();
-        divToMainScren.show();
-    });
-    divToshopeTShirt.append(backButton);
     body.append(divToshopeTShirt);
+    divToshopeTShirt.show()
 });
+//-------------------------------------------------------------------------
+//add item on array shope hoddie to div
+ShopeHoodieItem.forEach((element, index) => {
+    const cardHoodie = $(`<div class="divViewIten">
+    <img class="viewTheItem" src="${element.image}" >
+    <p class="describeTheItem">${element.name}<br> ${element.price}<br>
+    <select >
+     <option value=1>${element.option1}</option>;
+     <option value=2>${element.option2}</option>;
+     <option value=3>${element.option3}</option>;
+    </select><br>
+    <button id="addButton${index}" onclick=f3(${index}) >add to cart</button>
+   </p>
+  </div>`);
+    divToshopeHoodie.append(cardHoodie);
+});
+const backButtonHoodie = $("<button class='backButton'> back </button>");
+backButtonHoodie.addClass = " backButton"
+backButtonHoodie.on("click", () => {
+    divToshopeHoodie.hide();
+    divToMainScren.show();
+});
+divToshopeHoodie.append(backButtonHoodie);
+//-------------------------------------------------------------------------
+//botton to view div shope hoodie in body
 ShopeHoodie.on("click", () => {
     divToMainScren.hide();
-    ShopeHoodieItem.forEach((element, index) => {
-        const card = $(`<div class="divViewIten">
-        <img class="viewTheItem" src="${element.image}" >
-        <p class="describeTheItem">${element.name}<br> ${element.price}<br>
-        <select >
-         <option value=1>${element.option1}</option>;
-         <option value=2>${element.option2}</option>;
-         <option value=3>${element.option3}</option>;
-        </select><br>
-        <button id="addButton${index}" onclick=f3(${index}) >add to cart</button>
-       </p>
-      </div>`);
-        divToshopeHoodie.append(card);
-    });
-    const backButton = $("<button class='backButton'> back </button>");
-    backButton.addClass = " backButton"
-    backButton.on("click", () => {
-        divToshopeHoodie.hide();
-        divToMainScren.show();
-    });
-    divToshopeHoodie.append(backButton);
     body.append(divToshopeHoodie);
     divToshopeHoodie.show()
 });
+//-------------------------------------------------------------------------
+//add item on array shope short to div
+shopeShortItem.forEach((element, index) => {
+    const cardShort = $(`<div class="divViewIten">
+    <img class="viewTheItem" src="${element.image}" >
+    <p class="describeTheItem">${element.name}<br> ${element.price}<br>
+    <select >
+     <option value=1>${element.option1}</option>;
+     <option value=2>${element.option2}</option>;
+     <option value=3>${element.option3}</option>;
+    </select><br>
+    <button id="addButton${index}" onclick=f4(${index}) >add to cart</button>
+   </p>
+  </div>`);
+    divToshopeShort.append(cardShort)
+});
+const backButtonShort = $("<button class='backButton'> back </button>");
+backButtonShort.addClass = " backButton"
+backButtonShort.on("click", () => {
+    divToshopeShort.hide();
+    divToMainScren.show();
+});
+divToshopeShort.append(backButtonShort)
+//-------------------------------------------------------------------------
+//botton to view div shope short in body
 ShopeShort.on("click", () => {
     divToMainScren.hide();
-    shopeShortItem.forEach((element, index) => {
-        const card = $(`<div class="divViewIten">
-        <img class="viewTheItem" src="${element.image}" >
-        <p class="describeTheItem">${element.name}<br> ${element.price}<br>
-        <select >
-         <option value=1>${element.option1}</option>;
-         <option value=2>${element.option2}</option>;
-         <option value=3>${element.option3}</option>;
-        </select><br>
-        <button id="addButton${index}" onclick=f4(${index}) >add to cart</button>
-       </p>
-      </div>`);
-        divToshopeShort.append(card)
-    });
-    const backButton = $("<button class='backButton'> back </button>");
-    backButton.addClass = " backButton"
-    backButton.on("click", () => {
-        divToshopeShort.hide();
-        divToMainScren.show();
-    });
-    divToshopeShort.append(backButton)
+   
     body.append(divToshopeShort);
     divToshopeShort.show()
 });
