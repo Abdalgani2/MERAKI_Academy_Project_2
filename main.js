@@ -18,6 +18,8 @@ const loginInfo=[
     password:"1234",
     }
 ]
+if(localStorage.getItem("login")){
+localStorage.setItem("login",loginInfo);}
 $("#login").on("click",()=>{
     loginInfo.forEach(element => {
         if(element.userName===$("#name").val() &&element.password===$("#password").val()){
@@ -39,9 +41,9 @@ $("#creatAccount").on("click",()=>{
 divlogin.hide()
  body.append(divcreat)
  $("#login1").on("click",()=>{
-     console.log("äbood")
-    const ob={name:$("#name1").val(),password:$("#Password1").val}
+    const ob={userName:$("#name1").val(),password:$("#password1").val()}
     loginInfo.push(ob)
+    localStorage.setItem("login", JSON.stringify(loginInfo));
     divcreat.hide()
     body.append(divToMainScren);
 
