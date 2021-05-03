@@ -4,7 +4,7 @@ const divToMainScren = $("<div></div>");
 myStorage = window.localStorage;
 // --------------------------------------------------------------------------
 //main login div 
-const divlogin=$(`<div class="divLogin"> <h1 class="headerlogin">login</h1><hr>
+const divlogin = $(`<div class="divLogin"> <h1 class="headerlogin">login</h1><hr>
 <label class="label"for="username"><b>User name :</b></label>
 <input type="text" id="name" class= "input" name="username" placeholder="User name..">
 <label class ="label"for="Password"><b>Password :</b></label>
@@ -12,19 +12,21 @@ const divlogin=$(`<div class="divLogin"> <h1 class="headerlogin">login</h1><hr>
 <button id="login" class="loginButton">login</button>
 <button id="creatAccount">creat account</button>
 </div>`)
- body.append(divlogin)
-const loginInfo=[
-    {userName:"abd",
-    password:"1234",
+body.append(divlogin)
+const loginInfo = [
+    {
+        userName: "abd",
+        password: "1234",
     }
 ]
-if(!localStorage.getItem("login")){
-localStorage.setItem("login",loginInfo);}
+if (!localStorage.getItem("login")) {
+    localStorage.setItem("login", loginInfo);
+}
 // --------------------------------------------------------------------------
 //login button 
-$("#login").on("click",()=>{
+$("#login").on("click", () => {
     loginInfo.forEach(element => {
-        if(element.userName===$("#name").val() &&element.password===$("#password").val()){
+        if (element.userName === $("#name").val() && element.password === $("#password").val()) {
             console.log("abd")
             divlogin.hide();
             body.append(divToMainScren);
@@ -34,7 +36,7 @@ $("#login").on("click",()=>{
 })
 // --------------------------------------------------------------------------
 //div Create Account
-const divCreateAccount=$(`<div class="divLogin"> <h1 class="headerlogin">sign up</h1><hr>
+const divCreateAccount = $(`<div class="divLogin"> <h1 class="headerlogin">sign up</h1><hr>
 <label class="label"for="username"><b>User name :</b></label>
 <input type="text" id="name1" class= "input" name="username" placeholder="User name..">
 <label class ="label"for="Password"><b>Password :</b></label>
@@ -43,18 +45,18 @@ const divCreateAccount=$(`<div class="divLogin"> <h1 class="headerlogin">sign up
 <input type="password" id ="password2" class= "input" placeholder="Repeat Password" name="psw-repeat" required>
 <button id="login1">sign up</button>
 </div>`)
-$("#creatAccount").on("click",()=>{
-divlogin.hide()
- body.append(divCreateAccount)
- $("#login1").on("click",()=>{
-    loginInfo.push({userName:$("#name1").val(),password:$("#password1").val()})
-    localStorage.setItem("login", JSON.stringify(loginInfo));
-    divCreateAccount.hide()
-    body.append(divToMainScren);
+$("#creatAccount").on("click", () => {
+    divlogin.hide()
+    body.append(divCreateAccount)
+    $("#login1").on("click", () => {
+        loginInfo.push({ userName: $("#name1").val(), password: $("#password1").val() })
+        localStorage.setItem("login", JSON.stringify(loginInfo));
+        divCreateAccount.hide()
+        body.append(divToMainScren);
 
-    
 
- })
+
+    })
 })
 // --------------------------------------------------------------------------
 //main button to shope item 
@@ -62,7 +64,7 @@ const shopeShose = $("<button>shope shose</button>");
 shopeShose.addClass("mainButton");
 shopeShose.css({
 
-    "background-image": "url('shose.png')",
+    "background-image": "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8G2nYz03kyDOLZS-dPKX6U-jBovyyPpClaA&usqp=CAU')",
 });
 divToMainScren.append(shopeShose);
 const ShopeTShirt = $("<button>shope T shirt</button>");
@@ -92,13 +94,13 @@ const divToshopeShort = $("<div class='viewTheDiv'></div>");
 //-------------------------------------------------------------------------
 //my cart 
 const divAddToCart = $("<div class='viewTheDiv'></div>");
-const backButtoncart = $("<button class='backButton'> back </button>");
+const backButtoncart = $("<button class='backButton backButtonCart'> back </button>");
 backButtoncart.addClass = " backButton"
 backButtoncart.on("click", () => {
     divAddToCart.hide();
     divToMainScren.show();
+    backButtoncart.remove()
 });
-divAddToCart.append(backButtoncart);
 $(".viewCartButton").on("click", () => {
     divToMainScren.hide()
     divToshopeShose.hide()
@@ -107,13 +109,14 @@ $(".viewCartButton").on("click", () => {
     divToshopeShort.hide()
     body.append(divAddToCart);
     divAddToCart.show()
+    body.append(backButtoncart);
 })
 //-------------------------------------------------------------------------
 //array for save item in shope shose
 const shopeShoseItem = [
     {
         name: " adidas Shose",
-        price: " 70$",
+        price: "price: 70$",
         option1: "size 40-41",
         option2: "size 42-43",
         option3: "size 44-45",
@@ -121,7 +124,7 @@ const shopeShoseItem = [
     },
     {
         name: " fila Shose",
-        price: " 50$",
+        price: "price: 50$",
         option1: "size 38-39",
         option2: "size 40-41",
         option3: "size 42-43",
@@ -129,7 +132,7 @@ const shopeShoseItem = [
     },
     {
         name: " puma Shose",
-        price: " 60$",
+        price: "price: 60$",
         option1: "size 39-40",
         option2: "size 41-42",
         option3: "size 43-44",
@@ -138,7 +141,7 @@ const shopeShoseItem = [
     },
     {
         name: " puma Shose",
-        price: " 70$",
+        price: "price 70$",
         option1: "size 40-41",
         option2: "size 42-43",
         option3: "size 44-45",
@@ -147,7 +150,7 @@ const shopeShoseItem = [
     },
     {
         name: " nike Shose",
-        price: " 70$",
+        price: "price: 70$",
         option1: "size 38-39",
         option2: "size 40-41",
         option3: "size 42-43",
@@ -155,7 +158,7 @@ const shopeShoseItem = [
     },
     {
         name: " nike Shose",
-        price: " 60$",
+        price: "price: 60$",
         option1: "size 38-39",
         option2: "size 40-41",
         option3: "size 42-43",
@@ -326,12 +329,12 @@ const shopeShortItem = [
 function f1(index) {
     const card1 = $(`<div class="divViewIten" >
          <img class="viewTheItem" src="${shopeShoseItem[index].image}" >
-          <p class="describeTheItem">${shopeShoseItem[index].name}<br> ${index.price}<br>
-          <br><button>buy</button>
+          <p class="describeTheItem">${shopeShoseItem[index].name}<br> ${shopeShoseItem[index].price}
+          <br><button class="puyButton">buy</button>
           <br>
          </p>
         </div>`)
-    const remove = $("<button >remove</button>")
+    const remove = $("<button class='removeButton' >remove</button>")
     card1.append(remove)
     divAddToCart.append(card1);
     remove.on("click", () => {
@@ -344,7 +347,7 @@ function f1(index) {
 function f2(index) {
     const card1 = $(`<div class="divViewIten" >
          <img class="viewTheItem" src="${shopeTShirtItem[index].image}" >
-          <p class="describeTheItem">${shopeTShirtItem[index].name}<br> ${index.price}<br>
+          <p class="describeTheItem">${shopeTShirtItem[index].name}<br> ${shopeTShirtItem[index].price}<br>
           <select >
            <option value=1>${shopeTShirtItem[index].option1}</option>;
            <option value=2>${shopeTShirtItem[index].option2}</option>;
@@ -366,7 +369,7 @@ function f2(index) {
 function f3(index) {
     const card1 = $(`<div class="divViewIten" >
         <img class="viewTheItem" src="${ShopeHoodieItem[index].image}" >
-         <p class="describeTheItem">${ShopeHoodieItem[index].name}<br> ${index.price}<br>
+         <p class="describeTheItem">${ShopeHoodieItem[index].name}<br> ${ShopeHoodieItem[index].price}<br>
          <select >
           <option value=1>${ShopeHoodieItem[index].option1}</option>;
           <option value=2>${ShopeHoodieItem[index].option2}</option>;
@@ -388,7 +391,7 @@ function f3(index) {
 function f4(index) {
     const card1 = $(`<div class="divViewIten" >
         <img class="viewTheItem" src="${shopeShortItem[index].image}" >
-         <p class="describeTheItem">${shopeShortItem[index].name}<br> ${index.price}<br>
+         <p class="describeTheItem">${shopeShortItem[index].name}<br> ${shopeShortItem[index].price}<br>
          <select >
           <option value=1>${shopeShortItem[index].option1}</option>;
           <option value=2>${shopeShortItem[index].option2}</option>;
@@ -524,7 +527,7 @@ divToshopeShort.append(backButtonShort)
 //botton to view div shope short in body
 ShopeShort.on("click", () => {
     divToMainScren.hide();
-   
+
     body.append(divToshopeShort);
     divToshopeShort.show()
 });
