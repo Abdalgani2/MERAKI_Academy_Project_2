@@ -3,8 +3,11 @@ const divToMainScren = $("<div></div>");
 
 // --------------------------------------------------------------------------
 //main button to shope item 
-const divlogin=$(`<div class="divViewIten">
-<input type="text" id="name" class= "input" name="user name" placeholder="User name..">
+
+const divlogin=$(`<div class="divLogin"> <h1 class="headerlogin">login</h1><hr>
+<label class="label"for="username"><b>User name :</b></label>
+<input type="text" id="name" class= "input" name="username" placeholder="User name..">
+<label class ="label"for="Password"><b>Password :</b></label>
 <input type="password" id="password" class="input"  name="Password" placeholder="Password..">
 <button id="login">login</button>
 <button id="creatAccount">creat account</button>
@@ -45,8 +48,6 @@ divlogin.hide()
     
 
  })
-
-
 })
 // --------------------------------------------------------------------------
 //main button to shope item 
