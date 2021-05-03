@@ -1,15 +1,15 @@
 const body = $("body");
 const divToMainScren = $("<div></div>");
 
+myStorage = window.localStorage;
 // --------------------------------------------------------------------------
-//main button to shope item 
-
+//main login div 
 const divlogin=$(`<div class="divLogin"> <h1 class="headerlogin">login</h1><hr>
 <label class="label"for="username"><b>User name :</b></label>
 <input type="text" id="name" class= "input" name="username" placeholder="User name..">
 <label class ="label"for="Password"><b>Password :</b></label>
 <input type="password" id="password" class="input"  name="Password" placeholder="Password..">
-<button id="login">login</button>
+<button id="login" class="loginButton">login</button>
 <button id="creatAccount">creat account</button>
 </div>`)
  body.append(divlogin)
@@ -18,8 +18,10 @@ const loginInfo=[
     password:"1234",
     }
 ]
-if(localStorage.getItem("login")){
+if(!localStorage.getItem("login")){
 localStorage.setItem("login",loginInfo);}
+// --------------------------------------------------------------------------
+//login button 
 $("#login").on("click",()=>{
     loginInfo.forEach(element => {
         if(element.userName===$("#name").val() &&element.password===$("#password").val()){
@@ -30,21 +32,24 @@ $("#login").on("click",()=>{
         divlogin.append("<p>user name or password</p>");
     });
 })
-$("#creatAccount").on("click",()=>{
-
-    const divcreat=$(`<div class="divViewIten">
-<input type="text" id="name1" class= "input" name="user name" placeholder="User name..">
+// --------------------------------------------------------------------------
+//div Create Account
+const divCreateAccount=$(`<div class="divLogin"> <h1 class="headerlogin">sign up</h1><hr>
+<label class="label"for="username"><b>User name :</b></label>
+<input type="text" id="name1" class= "input" name="username" placeholder="User name..">
+<label class ="label"for="Password"><b>Password :</b></label>
 <input type="password" id="password1" class="input"  name="Password" placeholder="Password..">
-<input type="text"  class="input"  name="Password" placeholder="email-address">
-<button id="login1">login</button>
+<label for="psw-repeat" class="label"><b>Repeat Password</b></label>
+<input type="password" id ="password2" class= "input" placeholder="Repeat Password" name="psw-repeat" required>
+<button id="login1">sign up</button>
 </div>`)
+$("#creatAccount").on("click",()=>{
 divlogin.hide()
- body.append(divcreat)
+ body.append(divCreateAccount)
  $("#login1").on("click",()=>{
-    const ob={userName:$("#name1").val(),password:$("#password1").val()}
-    loginInfo.push(ob)
+    loginInfo.push({userName:$("#name1").val(),password:$("#password1").val()})
     localStorage.setItem("login", JSON.stringify(loginInfo));
-    divcreat.hide()
+    divCreateAccount.hide()
     body.append(divToMainScren);
 
     
